@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img {
+        width: 100%;
+        height: 100%;
+        max-width: 300px;
+    }
+</style>
+
+<body>
+    <button onclick="prevButton()">Previous</button>
+    <img src="" alt="" id="pictures">
+    <button onclick="nextButton()">Next</button>
+</body>
+
+</html>
+<!-- <script>
+    let pictures = document.getElementById('pictures')
+    let i = 0
+    let picArray = ['https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1AKF7LelsXtbK8YAYYdiPrDMZdFd74ZTgkQ&s', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtnvAOajH9gS4C30cRF7rD_voaTAKly2Ntaw&s']
+
+    pictures.src = picArray[i]
+
+    function showNextImage() {
+        if (i === picArray.length - 1) {
+            i = 0
+        } else {
+            i++
+        }
+        pictures.src = picArray[i]
+    }
+
+    function showPrevImage(params) {
+        if (i == 0) {
+            i = picArray.length - 1
+        } else {
+            i--
+        }
+        pictures.src = picArray[i]
+    }
+
+    nextButton.addEventListener('click', showNextImage)
+    nextButton.addEventListener('click', showPrevImage)
+
+    setInterval(showNextImage, 2000)
+
+</script> -->
+<script>
+    let pictures = document.getElementById('pictures')
+    // let nextButton = document.getElementById('nextButton')
+    let i = 0
+    let picArray = ['https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1AKF7LelsXtbK8YAYYdiPrDMZdFd74ZTgkQ&s', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtnvAOajH9gS4C30cRF7rD_voaTAKly2Ntaw&s']
+
+    pictures.src = picArray[i]
+
+    function nextButton() {
+        if (i === picArray.length - 1) {
+            i = 0
+        } else {
+            i++
+        }
+        pictures.src = picArray[i]
+    }
+
+    function prevButton() {
+        if (i == 0) {
+            i = picArray.length - 1
+        } else {
+            i--
+        }
+        pictures.src = picArray[i]
+    }
+    setInterval(nextButton, 3000)
+
+</script>
